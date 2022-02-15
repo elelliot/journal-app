@@ -1,0 +1,154 @@
+//Primer div antes de entrar al sidebar (JournalScreen.js)
+.journal__main-content{
+    display: flex;
+}
+
+//aside de Sidebar.js
+.journal__sidebar{
+    background-color: $dark-grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;//importante el uso de vh en lugar de %, investigar más de vh y wh
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 450px;
+}
+
+//div de icono de luna y nombre
+.journal__sidebar-navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+//h3 de div anterior
+.journal__sidebar-navbar h3{
+    font-weight: lighter;
+}
+
+//div de ícono de calendario y texto new entry de sidebar
+.journal__new-entry {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 30px;
+    width: 100%;
+
+
+    //para que el cambio de color no sea tan brusco, por qué afuera en lugar de adentro del &? idk, pero se vé algo diferente
+    transition: color .3s ease;
+    //oscuresemos el ícono y texto cuando le ponemos el cursor encima
+    &:hover{
+        color: darken($color: white, $amount: 50);
+
+    }
+}
+
+//div padre de JournalEntries.js
+.journal__entries{
+    //el flex y el scroll estabán originalmente
+    // flex: 1 1 auto;
+    margin-top: 30px;
+    overflow-y: auto;//scroll; Aquí declaramos el scroll cuando se desborde el contenido, no explícitamente por que está en auto, pero en teoría scroll sería adecuado
+
+    //webkit es un engine de navegadores, Chrome, Edge y Safari son algunos navegadores que lo soportan:
+
+    //(esto es para la scrollbar del journal entries (ESTUDIARLA) , si no, usar la opción 1)
+    //sin esto, los últimos 3 estilos no se aplican y se queda la barra nativa
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;//Le quitamos su apariencia, más no su presencia y funcionalidad, por eso aún ocupa el espacio. Sin background-color, toma el de su div.
+        border-radius: 20px;
+        background-color: #ccc; //color de fondo del espacio de scrollbar, no el arrastrable
+    }
+
+    // //Ancho de la scrollbar vertical
+    &::-webkit-scrollbar:vertical {
+        width: 8px;
+    }
+    // //props de la scrollbar horizontal (Por si se llega a ver; en el overflow: scroll debería)
+    &::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+
+    // //Propiedades del arrastable (the draggable scrolling handle.) (no sé si aplica para la horizontal también)
+    &::-webkit-scrollbar-thumb {
+        background-color: #818080;
+        border-radius: 20px;
+        
+        &:active{
+            background-color: #6b6969;
+        }
+    }
+    
+    
+
+    
+}
+
+//OPCIÓN 1 oculta la barra de scroll que se hace con el overflow-y de arriba (El espacio del scrollbar se aprovecha con lo que ocupe el contenedor)
+// .journal__entries::-webkit-scrollbar {
+//     display: none;
+// }
+//OPCIÓN 2 de ocultar scrollbar, no está tan chida (el espacio ocupado por el scrollbar no se aprovecha)
+// .journal__entries::-webkit-scrollbar {
+//     -webkit-appearance: none;
+//   }
+
+
+
+
+
+
+
+
+// se crean básados en el # de entries
+.journal__entry{
+    background-color: white;
+    border-radius: 4px;
+    color: $dark-grey;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    overflow:hidden;
+
+    //oscurese background-color del entry cuando pasa el mouse encima y hacemos transición para que no sea brusco el cambio
+    transition: background-color .3s ease;
+    &:hover{
+        background-color: darken($color: white, $amount: 20);
+
+    }
+}
+
+//tamaño de imagen de cada entry, las imagenes tal cual las ponemos en el style={} de ese mismo div en el JournalEntry.js
+.journal__entry-picture{
+    height: 75px;
+    width: 75px;
+}
+
+//Cuerpo (contenedor), titulo y contenido del entry
+.journal__entry-body{
+    padding: .5rem;
+
+}
+.journal__entry-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+.journal__entry-content{
+    font-size: 12px;
+}
+
+//Fecha del Entry
+.journal__entry-date-box{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.journal__entry-date-box span{
+    font-size: 12px;
+}

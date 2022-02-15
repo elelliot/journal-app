@@ -1,0 +1,54 @@
+.notes__main-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+//La barra de arriba de la pantalla principal, no la lateral.
+.notes_appbar{
+    align-items: center;
+    background-color: $primary;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+}
+
+//div del formulario
+.notes__content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
+
+.notes__title-input, .notes__textarea{
+    border: none;
+    //focus es activas un elemento al dar click, o con tab, etc.
+    &:focus{
+        outline: none;
+    }
+}
+
+.notes__title-input{
+    color: $dark-grey;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.notes__textarea{
+    border: none;
+    outline: none;//por si acaso, en otros navegadores puede mostrar la linea
+    color: $dark-grey;
+    font-size: 20px;
+    flex: 1 1 auto;//que se expanda lo más posible
+    resize: none;//Quita el ícono de resize del textarea
+}
+
+.notes__image img{
+    box-shadow: 5px 5px $dark-grey;
+    height: 150px;
+}

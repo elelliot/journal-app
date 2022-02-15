@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import './styles/styles.scss';
+import { JournalApp } from './JournalApp';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  //Como da warnings por no estar en StrictMode en el tab Components, se los puse, también le puse autoComplete a los campos del login, en caso de error se los puedo quitar
+    <React.StrictMode>
+      <JournalApp />
+    </React.StrictMode>
+    ,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

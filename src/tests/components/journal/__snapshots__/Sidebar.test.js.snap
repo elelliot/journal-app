@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Sidebar /> Debe mostrarse correctamente 1`] = `
+<aside
+  className="journal__sidebar"
+>
+  <div
+    className="journal__sidebar-navbar"
+  >
+    <h3
+      className="mt-5"
+    >
+      <i
+        className="far fa-moon"
+      />
+      <span>
+         
+         
+      </span>
+    </h3>
+    <button
+      className="btn"
+      onClick={[Function]}
+    >
+      Logout
+    </button>
+  </div>
+  <div
+    className="journal__new-entry pointer"
+    onClick={[Function]}
+  >
+    <i
+      className="far fa-calendar-plus fa-5x"
+    />
+    <p
+      className="mt-5"
+    >
+      New Entry
+    </p>
+  </div>
+  <div
+    className="journal__entries"
+  >
+    <div
+      className="journal__entry pointer animate__animated animate__fadeIn animate__faster"
+      onClick={[Function]}
+    >
+      <div
+        className="journal__entry-picture"
+        style={
+          Object {
+            "backgroundImage": "url(https://gatito2.com/gatito2.jpg)",
+            "backgroundSize": "cover",
+          }
+        }
+      />
+      <div
+        className="journal__entry-body"
+      >
+        <p
+          className="journal__entry-title"
+        >
+          Probando Save Note
+        </p>
+        <p
+          className="journal__entry-content"
+        >
+          Hola 2
+        </p>
+      </div>
+      <div
+        className="journal__entry-date-box"
+      >
+        <span>
+           
+          Friday 4th 
+           
+        </span>
+        <h4>
+          Feb 2022
+        </h4>
+      </div>
+    </div>
+    <div
+      className="journal__entry pointer animate__animated animate__fadeIn animate__faster"
+      onClick={[Function]}
+    >
+      <div
+        className="journal__entry-body"
+      >
+        <p
+          className="journal__entry-title"
+        />
+        <p
+          className="journal__entry-content"
+        />
+      </div>
+      <div
+        className="journal__entry-date-box"
+      >
+        <span>
+           
+          Friday 4th 
+           
+        </span>
+        <h4>
+          Feb 2022
+        </h4>
+      </div>
+    </div>
+    <div
+      className="journal__entry pointer animate__animated animate__fadeIn animate__faster"
+      onClick={[Function]}
+    >
+      <div
+        className="journal__entry-body"
+      >
+        <p
+          className="journal__entry-title"
+        />
+        <p
+          className="journal__entry-content"
+        />
+      </div>
+      <div
+        className="journal__entry-date-box"
+      >
+        <span>
+           
+          Friday 4th 
+           
+        </span>
+        <h4>
+          Feb 2022
+        </h4>
+      </div>
+    </div>
+  </div>
+</aside>
+`;

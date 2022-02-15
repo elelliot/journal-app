@@ -1,0 +1,15 @@
+//Este es el archivo que se va a importar en el index.js, y a su vez, tendrá acceso a los demás que vayamos creando
+
+
+//no importa que no esté el guión bajo del settings.scss, así lo detecta sass
+// pero si debe tenerlo en el nombre del archivo partial (_settings.scss)
+@import './base/settings';
+@import './base/base';
+
+//components
+@import './components/auth';
+@import './components/buttons';
+@import './components/links';
+@import './components/journal';
+@import './components/nothing';
+@import './components/notes';
